@@ -1,0 +1,13 @@
+-- 创建users表
+CREATE TABLE imsdb.users (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `account` VARCHAR(50) NOT NULL,
+  `password` VARCHAR(255) NOT NULL,
+  --`email` VARCHAR(100) NOT NULL,
+  `created_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`)
+)
+ENGINE=InnoDB
+DEFAULT CHARSET=utf8mb4
+COLLATE=utf8mb4_0900_ai_ci
+COMMENT='系统用户表';

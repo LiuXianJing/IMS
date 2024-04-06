@@ -1,0 +1,37 @@
+.switch-language-button-container {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    width: 32px;
+    height: 32px;
+    padding: 0;
+    .container {
+        position: relative;
+        height: 100%;
+        span {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            width: 16px;
+            height: 16px;
+            font-size: 12px;
+            border-radius: 4px;
+            background-color: #f3f0f0;
+        }
+        .zh {
+            left: 0;
+        }
+        .en {
+            left: 0;
+            z-index: -1;
+        }
+        .active {
+            width: 32px;
+            height: 32px;
+            font-size: 16px;
+            background-color: aqua;
+            z-index: 1;
+        }
+    }
+}
