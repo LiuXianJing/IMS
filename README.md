@@ -15,7 +15,7 @@ pnpm run dev
 pip install flask
 pip install flask-mysqldb
 pip install -U flask-cors
-
+# run server
 flask run
 ```
 
