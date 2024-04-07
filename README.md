@@ -1,3 +1,5 @@
+[English](/README.md) | [中文](/README_zh-CN.md)
+
 # Introduction
 - IMS is Integrated management system.
 - IMS is a project that separates the front and back ends.

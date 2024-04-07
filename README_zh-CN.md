@@ -1,3 +1,5 @@
+[English](/README.md) | [中文](/README_zh-CN.md)
+
 # 介绍
 - IMS是综合管理系统。
 - IMS是一个前后端分离的项目。
