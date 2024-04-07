@@ -9,6 +9,10 @@
 Note: Commercial use of this project code is prohibited
 ```
 
+# Features
+- Login and Registration, AIGC, Dashboard, Entertainment, Food, Question List, Record Video, About
+- Visual operation, multi-functional collection
+
 # Warehouse Address
 - [gitee](https://gitee.com/xian-jin/IMS)
 - [github](https://github.com/LiuXianJing/IMS)

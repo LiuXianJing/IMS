@@ -9,6 +9,10 @@
 注意：禁止将此项目代码用于商业用途
 ```
 
+# 特性
+- 登录注册，AIGC，仪表盘，娱乐，食品，问题列表，录制视频，关于
+- 可视化操作，多功能集合
+
 # 仓库地址
 - [gitee](https://gitee.com/xian-jin/IMS)
 - [github](https://github.com/LiuXianJing/IMS)
