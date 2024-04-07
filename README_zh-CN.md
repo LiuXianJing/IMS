@@ -1,4 +1,4 @@
-[English](/README.md) | [中文](/README_zh-CN.md)
+[English](/README.md) | [中文](/README_zh-CN.md) | [Japanese](/README_ja-JP.md)
 
 # 介绍
 - IMS是综合管理系统。
@@ -35,7 +35,7 @@ pip install flask-mysqldb
 ```bash
 pip install -U flask-cors
 ```
-# 启动服务
+### 启动服务
 ```bash
 flask run
 ```
