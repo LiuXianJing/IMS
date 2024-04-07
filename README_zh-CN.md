@@ -1,4 +1,4 @@
-[English](/README.md) | [中文](/README_zh-CN.md) | [Japanese](/README_ja-JP.md)
+[English](/README.md) | [中文](/README_zh-CN.md) | [Japanese](/README_ja-JP.md) | [German](/README_de.md)
 
 # 介绍
 - IMS是综合管理系统。

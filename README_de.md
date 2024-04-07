@@ -1,30 +1,31 @@
 [English](/README.md) | [中文](/README_zh-CN.md) | [Japanese](/README_ja-JP.md) | [German](/README_de.md)
-# Introduction
-- IMS is Integrated management system.
-- IMS is a project that separates the front and back ends.
-- frontend: React.
-- backend: Python.
+
+# Einführung
+- IMS ist ein integriertes Managementsystem.
+- IMS ist ein Projekt, das Front- und Backend trennt.
+- Frontend: React.
+- Backend: Python.
 ```
-Note: Commercial use of this project code is prohibited
+Hinweis: Die kommerzielle Nutzung dieses Projektcodes ist untersagt
 ```
 
-# Features
-- Login and Registration, AIGC, Dashboard, Entertainment, Food, Question List, Record Video, About
-- Visual operation, multi-functional collection
+# Merkmale
+- Anmeldung und Registrierung, AIGC, Dashboard, Unterhaltung, Essen, Fragenliste, Video aufnehmen, Info
+- Visuelle Bedienung, multifunktionale Sammlung
 
-# Warehouse Address
+# Lageradresse
 - [gitee](https://gitee.com/xian-jin/IMS)
 - [github](https://github.com/LiuXianJing/IMS)
 
-# Run Project
-## frontend
+# Projekt ausführen
+## Frontend
 ```bash
 pnpm i
 ```
 ```bash
 pnpm run dev
 ```
-## bcakend
+## Bcakend
 ```bash
 pip install flask
 ```
@@ -34,12 +35,12 @@ pip install flask-mysqldb
 ```bash
 pip install -U flask-cors
 ```
-### run server
+### Server ausführen
 ```bash
 flask run
 ```
 
-# Technology Stack
+# Technologie-Stack
 ## frontend
 - React
 - TypeScript
