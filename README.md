@@ -6,6 +6,10 @@
 - frontend: React.
 - backend: Python.
 
+# Warehouse Address
+- [gitee](https://gitee.com/xian-jin/IMS)
+- [github](https://github.com/LiuXianJing/IMS)
+
 # Run Project
 ## frontend
 ```bash

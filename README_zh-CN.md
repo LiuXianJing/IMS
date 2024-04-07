@@ -6,6 +6,10 @@
 - 前端：React技术栈。
 - 后端：Python。
 
+# 仓库地址
+- [gitee](https://gitee.com/xian-jin/IMS)
+- [github](https://github.com/LiuXianJing/IMS)
+
 # 运行项目
 ## 前端
 ```bash
