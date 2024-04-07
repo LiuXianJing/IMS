@@ -1,4 +1,4 @@
-[English](/README.md) | [中文](/README_zh-CN.md)
+[English](/README.md) | [中文](/README_zh-CN.md) | [Japanese](/README_ja-JP.md)
 
 # Introduction
 - IMS is Integrated management system.
@@ -35,7 +35,7 @@ pip install flask-mysqldb
 ```bash
 pip install -U flask-cors
 ```
-# run server
+### run server
 ```bash
 flask run
 ```
