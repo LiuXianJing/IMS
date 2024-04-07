@@ -5,6 +5,13 @@
 - IMS is a project that separates the front and back ends.
 - frontend: React.
 - backend: Python.
+```
+Note: Commercial use of this project code is prohibited
+```
+
+# Warehouse Address
+- [gitee](https://gitee.com/xian-jin/IMS)
+- [github](https://github.com/LiuXianJing/IMS)
 
 # Run Project
 ## frontend
