@@ -1,5 +1,9 @@
 [English](/README.md) | [中文](/README_zh-CN.md) | [Japanese](/README_ja-JP.md) | [German](/README_de.md)
 
+<div align="center">
+<img src="https://gw.alipayobjects.com/zos/rmsportal/LyTPSGknLUlxiVdwMWyu.gif" height="150" />
+</div>
+
 # 介绍
 - IMS是综合管理系统。
 - IMS是一个前后端分离的项目。
