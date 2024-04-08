@@ -3,8 +3,8 @@ import { getUserAPI } from "../../api"
 import { useEffect, useState } from "react"
 import { UserType } from "../../types/user"
 import EditUserModal from "./EditUserModal"
-import './index.less'
 import { ExclamationCircleFilled } from "@ant-design/icons"
+import './index.less'
 
 const UserManagement = () => {
 
