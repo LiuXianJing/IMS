@@ -64,7 +64,6 @@ def get_tuser():
         info_dict = {
             'id': row[0],
             'account': row[1],
-            'password': row[2],
             'created_at': row[3],
         }
         data_list.append(info_dict)
