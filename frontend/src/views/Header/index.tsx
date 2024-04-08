@@ -1,14 +1,18 @@
-import { useAppDispatch } from '../../hooks'
-import { chnageSignModalVisible, } from '../../store/slices'
+import { Avatar } from 'antd'
+import { useAppDispatch, useAppSelector } from '../../hooks'
+import { changeSignModalVisible, selectUserSignedInfo, } from '../../store/slices'
 import SignInOrUp from '../SignInOrUp'
+import { UserOutlined } from '@ant-design/icons'
+import { getUserAvatarUrl } from '../../utils'
 import './index.less'
 
 const Header = () => {
 
     const dispatch = useAppDispatch()
+    const userSignedInfo =  useAppSelector(selectUserSignedInfo)
 
     const handleSignInOrUp = () => {
-        dispatch(chnageSignModalVisible(true))
+        dispatch(changeSignModalVisible(true))
     }
 
     return <div className="header-container">
@@ -21,7 +25,22 @@ const Header = () => {
         </div>
         <div className='operate'>
             <div className="item">Operate1</div>
-            <div className="item" onClick={handleSignInOrUp}>Sign In/Up</div>
+            {
+                userSignedInfo && userSignedInfo.account ?
+                <div className="account-item">
+                    <Avatar 
+                    src={getUserAvatarUrl()}
+                    style={{ backgroundColor: '#87d068' }} 
+                    icon={<UserOutlined 
+                    />}
+                    >
+                    </Avatar>
+                    &nbsp;
+                    {userSignedInfo.account}
+                </div>
+                :
+                <div className="item" onClick={handleSignInOrUp}>Sign In/Up</div>
+            }
         </div>
         <SignInOrUp />
     </div>

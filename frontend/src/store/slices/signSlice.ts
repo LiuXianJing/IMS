@@ -1,29 +1,38 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit'
 import type { RootState } from '../../store'
+import { UserSignInfoType } from '../../types'
 
 // Define a type for the slice state
 export interface SignState {
-  visible: boolean
+  visible: boolean,
+  userSignedInfo: UserSignInfoType,
 }
 
 // Define the initial state using that type
 const initialState: SignState = {
-    visible: false
+    visible: false,
+    userSignedInfo: {
+      account: '',
+      password: '',
+    }
 }
 
 export const signSlice = createSlice({
   name: 'sign',
-  // `createSlice` will infer the state type from the `initialState` argument
   initialState,
   reducers: {
-    chnageSignModalVisible: (state, action: PayloadAction<boolean>) => {
+    changeSignModalVisible: (state, action: PayloadAction<boolean>) => {
         state.visible = action.payload
+    },
+    setUserSignedInfo: (state, action: PayloadAction<UserSignInfoType>) => {
+        state.userSignedInfo = action.payload
     },
   }
 })
 
-export const { chnageSignModalVisible, } = signSlice.actions
+export const { changeSignModalVisible, setUserSignedInfo, } = signSlice.actions
 
 export const selectVisible = (state: RootState) => state.sign.visible
+export const selectUserSignedInfo = (state: RootState) => state.sign.userSignedInfo
 
 export default signSlice.reducer
