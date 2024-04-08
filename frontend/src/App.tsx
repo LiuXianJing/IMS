@@ -15,6 +15,7 @@ import DashBoardOverview from "./views/DashBoard/Overview";
 import FoodsMilkPowder from "./views/Foods/MilkPowder";
 import AboutMe from "./views/About/AboutMe";
 import AboutIMS from "./views/About/AboutIMS";
+import UserManagement from "./views/UsersManagement";
 import './App.less'
 
 function App() {
@@ -55,6 +56,7 @@ function App() {
                                 <Route path="me" element={<AboutMe />}></Route>
                                 <Route path="ims" element={<AboutIMS />}></Route>
                             </Route>
+                            <Route path='user-management' element={<UserManagement />} />
                             <Route path='/' element={<DashBoardOverview />} />
                         </Routes>
                     </div>

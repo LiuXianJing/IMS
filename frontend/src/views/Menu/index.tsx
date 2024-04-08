@@ -51,7 +51,9 @@ const items: MenuItem[] = [
   getItem('About', 'about', <SettingOutlined />, [
     getItem('Me', 'me'),
     getItem('IMS', 'ims'),
-  ])
+  ]),
+
+  getItem('User Management', 'user-management', <SettingOutlined />)
 ];
 
 const ProMenu = () => {
