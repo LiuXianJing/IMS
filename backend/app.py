@@ -11,6 +11,33 @@ app.config["MYSQL_DB"] = "imsdb"
 
 mysql = MySQL(app)
 
+@app.route("/sign_in_up", methods=["POST"])
+def sign_in_up():
+    json_data = request.get_json()
+    account = json_data['account']
+    password = json_data['password']
+    cur = mysql.connection.cursor()
+    query = "SELECT account FROM users WHERE account = %s"
+    cur.execute(query, (account,))
+    rows = cur.fetchall()
+    if rows[0]:
+        cur.close()
+        return jsonify({
+        'data': None,
+        'code': 200,
+        'status': True,
+        'msg': 'Sign In successfully',
+    })
+    cur.execute('insert into users (account, password) values (%s, %s)', (account, password))
+    mysql.connection.commit()
+    cur.close()
+    return jsonify({
+        'data': None,
+        'code': 200,
+        'status': True,
+        'msg': 'Sign Up successfully',
+    })
+
 @app.route("/add_user", methods=["POST"])
 def add_user():
     json_data = request.get_json()

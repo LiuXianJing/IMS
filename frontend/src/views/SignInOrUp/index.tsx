@@ -2,11 +2,11 @@ import { ChangeEvent, useMemo, useState } from "react";
 import { Button, Input, Modal, QRCode, Select, Space, message } from "antd";
 import MyInput from "../../components/MyInput";
 import { useAppSelector, useAppDispatch } from '../../hooks'
-import { chnageSignModalVisible, selectVisible } from "../../store/slices";
+import { changeSignModalVisible, selectVisible, setUserSignedInfo } from "../../store/slices";
 import { SignErrType } from "../../types";
 import { phoneAreaCodesByWorld } from "../../utils";
+import { addUserAPI, getUserAPI, signInOrUpAPI } from "../../api";
 import './index.less'
-import { addUserAPI, getUserAPI } from "../../api";
 
 interface IProps {}
 
@@ -26,7 +26,7 @@ const SignInOrUp = (_props: IProps) => {
     }, [VCodeCountdown])
 
     const handleCancel = () => {
-        dispatch(chnageSignModalVisible(false))
+        dispatch(changeSignModalVisible(false))
     }
 
     const handleChangeAccount = (e: ChangeEvent<HTMLInputElement>) => {
@@ -37,15 +37,19 @@ const SignInOrUp = (_props: IProps) => {
         setPassword(e.target.value)
     }
 
-    const addUser = async () => {
+    const signFun = async () => {
         const param = {
             account: account,
             password: password,
         }
         try {
-            const res: any = await addUserAPI(param)
+            const res: any = await signInOrUpAPI(param)
             if(res.code == 200) {
-                message.success('User added successfully')
+                message.success(res.msg)
+                dispatch(setUserSignedInfo({
+                    account: account,
+                }))
+                dispatch(changeSignModalVisible(false))
             }
         } catch (error: any) {
             message.error(error.message)
@@ -69,7 +73,7 @@ const SignInOrUp = (_props: IProps) => {
             })
             return
         }
-        addUser()
+        signFun()
     }
 
     const handleSwitchSign = () => {
