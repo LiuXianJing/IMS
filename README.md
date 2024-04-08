@@ -1,4 +1,9 @@
 [English](/README.md) | [中文](/README_zh-CN.md) | [Japanese](/README_ja-JP.md) | [German](/README_de.md)
+
+<div align="center">
+<img src="https://gw.alipayobjects.com/zos/rmsportal/LyTPSGknLUlxiVdwMWyu.gif" height="150" />
+</div>
+
 # Introduction
 - IMS is Integrated management system.
 - IMS is a project that separates the front and back ends.
