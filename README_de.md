@@ -40,11 +40,11 @@ pip install -U flask-cors
 flask run
 ```
 
-# Technologie Stack
+# Technologie-Stack
 ## frontend
 <table>
     <thead>
-        <th>Technology</th><th>Version</th>
+        <th>Technologie</th><th>Ausführung</th>
     </thead>
     <tbody>
         <tr>
@@ -89,7 +89,7 @@ flask run
 ## backend
 <table>
     <thead>
-        <th>Technology</th><th>Version</th>
+        <th>Technologie</th><th>Ausführung</th>
     </thead>
     <tbody>
         <tr>
