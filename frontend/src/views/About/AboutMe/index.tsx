@@ -73,11 +73,9 @@ const AboutMe = () => {
                     Description: 
                 </span>
                 <span className="value">
-                    I am a software engineer with a passion for learning and developing software.
-                    I have a strong background in computer science and engineering.
-                    I have a strong background in software engineering.
-                    Technology Stack:
-                    HTML, CSS, JavaScript, React, Vue, Node.js, Golang, Java, Python, C/C++, MySQL, Redis, and others.
+                    I am an IT practitioner with strong full-stack development capabilities. My technical expertise includes front-end/back-end/operation and maintenance/algorithms, etc.
+                    Technology stack:
+                    React, Vue, HTML, CSS, JavaScript, Node.js, Golang, Java, Python, C/C++, MySQL, Redis, and more.
                     And I can also do hardware related work.
                 </span>
             </div>
