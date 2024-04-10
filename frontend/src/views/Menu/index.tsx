@@ -53,7 +53,9 @@ const items: MenuItem[] = [
     getItem('IMS', 'ims'),
   ]),
 
-  getItem('User Management', 'user-management', <SettingOutlined />)
+  getItem('User Management', 'user-management', <SettingOutlined />),
+
+  getItem('Ip Info', 'ip_info', <SettingOutlined />),
 ];
 
 const ProMenu = () => {

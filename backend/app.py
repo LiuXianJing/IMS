@@ -2,6 +2,8 @@ from flask import Flask, request, jsonify
 from flask_mysqldb import MySQL
 from flask_cors import CORS
 
+from util.get_ip_info import get_ip_info
+
 app = Flask(__name__)
 CORS(app)
 app.config["MYSQL_HOST"] = "localhost"
@@ -103,6 +105,18 @@ def delete_user():
         'code': 200,
         'status': True,
         'msg': 'User deleted successfully',
+    })
+
+@app.route("/get_ip_info", methods=["POST"])
+def get_ip_api():
+    json_data = request.get_json()
+    ip = json_data['ip']
+    data = get_ip_info(ip)
+    return jsonify({
+        'data': data,
+        'code': 200,
+        'status': True,
+        'msg': 'get ip successfully',
     })
 
 if __name__ == "__main__":
