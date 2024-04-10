@@ -107,3 +107,143 @@ flask run
         </tr>
     </tbody>
 </table>
+
+# Project FIles Tree
+```
+IMS
+├─ backend
+│  ├─ app.py
+│  ├─ controller
+│  ├─ db
+│  │  └─ users.sql
+│  ├─ README.md
+│  ├─ util
+│  │  ├─ get_ip_info.py
+│  │  └─ __pycache__
+│  │     └─ get_ip_info.cpython-311.pyc
+│  └─ __pycache__
+│     └─ app.cpython-311.pyc
+├─ frontend
+│  ├─ .eslintrc.cjs
+│  ├─ index.html
+│  ├─ package.json
+│  ├─ pnpm-lock.yaml
+│  ├─ public
+│  │  └─ vite.svg
+│  ├─ README.md
+│  ├─ src
+│  │  ├─ api
+│  │  │  ├─ axios.ts
+│  │  │  ├─ index.ts
+│  │  │  └─ request
+│  │  │     ├─ ip.ts
+│  │  │     └─ sign.ts
+│  │  ├─ App.less
+│  │  ├─ App.tsx
+│  │  ├─ assets
+│  │  │  ├─ images
+│  │  │  │  └─ logo
+│  │  │  │     └─ technology
+│  │  │  │        └─ mdn.png
+│  │  │  └─ react.svg
+│  │  ├─ components
+│  │  │  ├─ GraphglGpuLayout
+│  │  │  │  ├─ index.less
+│  │  │  │  └─ index.tsx
+│  │  │  ├─ MyInput
+│  │  │  │  ├─ index.less
+│  │  │  │  └─ index.tsx
+│  │  │  ├─ SummaryGraph
+│  │  │  │  ├─ index.less
+│  │  │  │  └─ index.tsx
+│  │  │  ├─ SwitchLanguageButton
+│  │  │  │  ├─ index.less
+│  │  │  │  └─ index.tsx
+│  │  │  └─ Video
+│  │  │     ├─ index.less
+│  │  │     └─ index.tsx
+│  │  ├─ hooks
+│  │  │  ├─ index.tsx
+│  │  │  └─ reduxHook.ts
+│  │  ├─ index.css
+│  │  ├─ main.tsx
+│  │  ├─ store
+│  │  │  ├─ index.tsx
+│  │  │  └─ slices
+│  │  │     ├─ index.tsx
+│  │  │     └─ signSlice.ts
+│  │  ├─ types
+│  │  │  ├─ entertainment.ts
+│  │  │  ├─ foods.ts
+│  │  │  ├─ index.ts
+│  │  │  ├─ sign.ts
+│  │  │  ├─ technology.ts
+│  │  │  └─ user.ts
+│  │  ├─ utils
+│  │  │  ├─ index.ts
+│  │  │  └─ sign.ts
+│  │  ├─ views
+│  │  │  ├─ About
+│  │  │  │  ├─ AboutIMS
+│  │  │  │  │  ├─ index.less
+│  │  │  │  │  └─ index.tsx
+│  │  │  │  └─ AboutMe
+│  │  │  │     ├─ index.less
+│  │  │  │     └─ index.tsx
+│  │  │  ├─ AIGC
+│  │  │  │  ├─ BusinessLayout
+│  │  │  │  │  └─ index.tsx
+│  │  │  │  └─ Introduction
+│  │  │  │     └─ index.tsx
+│  │  │  ├─ DashBoard
+│  │  │  │  └─ Overview
+│  │  │  │     ├─ index.less
+│  │  │  │     └─ index.tsx
+│  │  │  ├─ Entertainment
+│  │  │  │  └─ CharacterIntroduction
+│  │  │  │     ├─ index.less
+│  │  │  │     └─ index.tsx
+│  │  │  ├─ Foods
+│  │  │  │  └─ MilkPowder
+│  │  │  │     └─ index.tsx
+│  │  │  ├─ Header
+│  │  │  │  ├─ index.less
+│  │  │  │  └─ index.tsx
+│  │  │  ├─ IpInfo
+│  │  │  │  └─ index.tsx
+│  │  │  ├─ Menu
+│  │  │  │  ├─ index.less
+│  │  │  │  └─ index.tsx
+│  │  │  ├─ QueryTable
+│  │  │  │  └─ index.tsx
+│  │  │  ├─ RecordVideo
+│  │  │  │  ├─ index.less
+│  │  │  │  └─ index.tsx
+│  │  │  ├─ SignInOrUp
+│  │  │  │  ├─ index.less
+│  │  │  │  └─ index.tsx
+│  │  │  ├─ Technology
+│  │  │  │  └─ Frontend
+│  │  │  │     ├─ Frame
+│  │  │  │     │  └─ index.tsx
+│  │  │  │     ├─ ProgrammingLanguage
+│  │  │  │     │  └─ index.tsx
+│  │  │  │     └─ Websites
+│  │  │  │        ├─ index.less
+│  │  │  │        └─ index.tsx
+│  │  │  └─ UsersManagement
+│  │  │     ├─ EditUserModal
+│  │  │     │  └─ index.tsx
+│  │  │     ├─ index.less
+│  │  │     └─ index.tsx
+│  │  └─ vite-env.d.ts
+│  ├─ tsconfig.json
+│  ├─ tsconfig.node.json
+│  └─ vite.config.ts
+├─ LICENSE
+├─ README.md
+├─ README_de.md
+├─ README_ja-JP.md
+└─ README_zh-CN.md
+
+```
