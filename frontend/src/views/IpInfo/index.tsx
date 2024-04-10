@@ -36,13 +36,25 @@ const IpInfo = () => {
         <div>
             {
                 ipInfoItems?.length ?
-                <Descriptions title="Ip Info" layout="vertical" items={ipInfoItems} />
+                <Descriptions 
+                title="Ip Info" 
+                layout="vertical" 
+                bordered 
+                items={ipInfoItems} 
+                />
                 :
                 <Result
                 status="500"
                 title=""
                 subTitle="Sorry, something went wrong."
-                extra={<Button type="primary" onClick={() => {location.reload()}}>Refresh Page</Button>}
+                extra={
+                    <Button 
+                    type="primary" 
+                    onClick={() => {location.reload()}}
+                    >
+                        Refresh Page
+                    </Button>
+                }
                 />
             }
         </div>
