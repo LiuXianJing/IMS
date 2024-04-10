@@ -16,6 +16,7 @@ import FoodsMilkPowder from "./views/Foods/MilkPowder";
 import AboutMe from "./views/About/AboutMe";
 import AboutIMS from "./views/About/AboutIMS";
 import UserManagement from "./views/UsersManagement";
+import IpInfo from "./views/IpInfo";
 import './App.less'
 
 function App() {
@@ -57,6 +58,7 @@ function App() {
                                 <Route path="ims" element={<AboutIMS />}></Route>
                             </Route>
                             <Route path='user-management' element={<UserManagement />} />
+                            <Route path="ip_info" element={<IpInfo />} />
                             <Route path='/' element={<DashBoardOverview />} />
                         </Routes>
                     </div>
