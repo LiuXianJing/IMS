@@ -22,14 +22,9 @@ import VisualLargeScreen from "./views/VisualLargeScreen";
 import Other from "./views/Other";
 import ChatChat from "./views/ChatChat";
 import majesticMusic from './assets/audio/majestic_music.mp3'
-import { playMusic } from "./utils";
 import './App.less'
 
 function App() {
-
-    useEffect(() => {
-        playMusic()
-    }, [])
 
     return  <>
         <BrowserRouter future={{ v7_startTransition: true }}>
