@@ -2,7 +2,7 @@ import { useEffect, useState } from "react"
 import Chat from "../../components/Chat"
 import { ChatDataType } from "../../types"
 import { getChatMessagesAPI, sendChatMessageAPI, } from "../../api"
-import { getUserAvatarUrl, playMusic } from "../../utils"
+import { getUserAvatarUrl, } from "../../utils"
 import './index.less'
 
 const ChatChat = () => {
@@ -11,7 +11,6 @@ const ChatChat = () => {
 
     useEffect(() => {
         getChatData()
-        playMusic()
         /* let timer = setInterval(() => {
             getChatData()
         }, 2 * 1000)
