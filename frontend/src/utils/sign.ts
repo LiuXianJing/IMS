@@ -11,8 +11,8 @@ export const phoneAreaCodesByWorld = [
     { value: '1345', label: 'Cayman Islands' },
 ]
 
-export const getUserAvatarUrl = (): string => {
-    const seed = Math.round(Math.random() * 100)
+export const getUserAvatarUrl = (num?: number): string => {
+    const seed = num || Math.round(Math.random() * 100)
     const userAvatarUrl = `https://api.dicebear.com/7.x/miniavs/svg?seed=${seed}`
     return userAvatarUrl
 }

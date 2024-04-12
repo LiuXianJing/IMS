@@ -17,6 +17,9 @@ import AboutMe from "./views/About/AboutMe";
 import AboutIMS from "./views/About/AboutIMS";
 import UserManagement from "./views/UsersManagement";
 import IpInfo from "./views/IpInfo";
+import VisualLargeScreen from "./views/VisualLargeScreen";
+import Other from "./views/Other";
+import ChatChat from "./views/ChatChat";
 import './App.less'
 
 function App() {
@@ -27,7 +30,7 @@ function App() {
                 <Header />
                 <div className='main-container'>
                     <ProMenu></ProMenu>
-                    <div className='content'>
+                    <div className='pro-content'>
                         <Routes>
                             <Route path="dash_board_overview" element={<DashBoardOverview />}></Route>
                             <Route path='record_video' element={<RecordVideo />} />
@@ -58,7 +61,10 @@ function App() {
                                 <Route path="ims" element={<AboutIMS />}></Route>
                             </Route>
                             <Route path='user-management' element={<UserManagement />} />
+                            <Route path='visual_large_screen' element={<VisualLargeScreen />} />
                             <Route path="ip_info" element={<IpInfo />} />
+                            <Route path='/chat_chat' element={<ChatChat />} />
+                            <Route path="other" element={<Other />} />
                             <Route path='/' element={<DashBoardOverview />} />
                         </Routes>
                     </div>
