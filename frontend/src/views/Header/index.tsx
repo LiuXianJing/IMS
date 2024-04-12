@@ -4,7 +4,7 @@ import { useAppDispatch, useAppSelector } from '../../hooks'
 import { changeSignModalVisible, selectUserSignedInfo, } from '../../store/slices'
 import SignInOrUp from '../SignInOrUp'
 import { UserOutlined } from '@ant-design/icons'
-import { getUserAvatarUrl } from '../../utils'
+import { getUserAvatarUrl, playMusic } from '../../utils'
 import './index.less'
 
 const Header = () => {
@@ -12,6 +12,10 @@ const Header = () => {
     const navigate = useNavigate()
     const dispatch = useAppDispatch()
     const userSignedInfo =  useAppSelector(selectUserSignedInfo)
+
+    const handlePlayMusic = () => {
+        playMusic()
+    }
 
     const handleEnterChat = () => {
         navigate('/chat_chat')
@@ -34,6 +38,9 @@ const Header = () => {
             <span className='name'>IMS</span>
         </div>
         <div className='operate'>
+            <div className="item" onClick={handlePlayMusic}>
+                <span>Play/Pause Music</span>
+            </div>
             <div className="item" onClick={handleEnterChat}>
                 <span>To Chat</span>
             </div>

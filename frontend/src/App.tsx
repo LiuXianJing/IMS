@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { BrowserRouter, Routes, Route, } from "react-router-dom"
 import { ConfigProvider } from 'antd'
 import enUS from 'antd/locale/en_US';
@@ -20,13 +21,25 @@ import IpInfo from "./views/IpInfo";
 import VisualLargeScreen from "./views/VisualLargeScreen";
 import Other from "./views/Other";
 import ChatChat from "./views/ChatChat";
+import majesticMusic from './assets/audio/majestic_music.mp3'
+import { playMusic } from "./utils";
 import './App.less'
 
 function App() {
 
+    useEffect(() => {
+        playMusic()
+    }, [])
+
     return  <>
         <BrowserRouter future={{ v7_startTransition: true }}>
             <ConfigProvider locale={enUS}>
+                <div style={{display: "none"}}>
+                    <h4>IMS Audio</h4>
+                    <audio className="ims-audio" src={majesticMusic} loop muted>
+                        Audio
+                    </audio>
+                </div>
                 <Header />
                 <div className='main-container'>
                     <ProMenu></ProMenu>
