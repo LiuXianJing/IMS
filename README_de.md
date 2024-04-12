@@ -26,6 +26,7 @@ Hinweis: Die kommerzielle Nutzung dieses Projektcodes ist untersagt
 - IP-Informationsmanagement,
 - Großer Visualisierungsbildschirm,
 - Chat-Gespräche,
+- Spiel Musik,
 - Visuelle Bedienung, multifunktionale Sammlung
 
 # Lageradresse

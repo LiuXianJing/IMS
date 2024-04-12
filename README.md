@@ -26,6 +26,7 @@ Note: Commercial use of this project code is prohibited
 - IP information management,
 - Large visualization screen,
 - Chat conversations,
+- Play music,
 - Visual operation, multi-functional collection
 
 # Warehouse Address
