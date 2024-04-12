@@ -14,7 +14,18 @@ Hinweis: Die kommerzielle Nutzung dieses Projektcodes ist untersagt
 ```
 
 # Merkmale
-- Anmeldung und Registrierung, AIGC, Dashboard, Unterhaltung, Essen, Fragenliste, Video aufnehmen, Info， Benutzerverwaltung, IP-Informationsmanagement
+- Anmeldung und Registrierung, 
+- AIGC, 
+- Dashboard, 
+- Unterhaltung, 
+- Essen, 
+- Fragenliste, 
+- Video aufnehmen, 
+- Info， 
+- Benutzerverwaltung, 
+- IP-Informationsmanagement,
+- Großer Visualisierungsbildschirm,
+- Chat-Gespräche,
 - Visuelle Bedienung, multifunktionale Sammlung
 
 # Lageradresse
