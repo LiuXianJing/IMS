@@ -55,7 +55,11 @@ const items: MenuItem[] = [
 
   getItem('User Management', 'user-management', <SettingOutlined />),
 
+  getItem('Visual Large Screen', 'visual_large_screen', <SettingOutlined />),
+
   getItem('Ip Info', 'ip_info', <SettingOutlined />),
+
+  getItem('Chat Chat', 'chat_chat', <SettingOutlined />),
 ];
 
 const ProMenu = () => {

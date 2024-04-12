@@ -1,0 +1,96 @@
+.chat-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    padding: 20px 40px;
+    background-color: #bac1cb;
+    background-image: url('../../assets/images/background/grasslandScenery.jpg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    span {
+        display: inline-block;
+    }
+    .chat-content {
+        overflow-y: auto;
+        .chat-item {
+            display: flex;
+            .avatar {
+                max-width: 60px;
+                height: 64px;
+                padding: 10px 0;
+                border-radius: 50%;
+                .name {
+                    font-size: 12px;
+                    color: blue;
+                }
+            }
+            .content {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                max-width: 50%;
+                padding: 10px;
+                margin: 10px;
+                border-radius: 10px;
+                border: 1px solid #ebe7e7;
+                .time {
+                    font-size: 12px;
+                    color: #9298a3;
+                }
+            }
+        }
+        .is-me {
+            flex-direction: row-reverse;
+            .content {
+                align-items: flex-end;
+                background-color: aqua;
+            }
+        }
+        .is-other {
+            flex-direction: row;
+            .content {
+                background-color: bisque;
+            }
+        }
+        &::-webkit-scrollbar {
+            display: none;
+        }
+    }
+    .operate {
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+        padding: 10px;
+        .input-message {
+            flex: 1;
+            height: 70px;
+            .message-textarea {
+                width: 90%;
+                height: 48px;
+                padding: 10px;
+                border: 1px solid #ebe7e7;
+                border-radius: 10px;
+                outline: none;
+                resize: none;
+                &::-webkit-input-placeholder {
+                    font-size: 16px;
+                    color: #7a7a80;
+                    font-weight: bold;
+                }
+            }
+        }
+        .send-btn {
+            padding: 10px 30px;
+            border-radius: 10px;
+            font-size: 20px;
+            background-color: #6a9ded;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            &:active {
+                background-color: #2d76e7;
+            }
+        }
+    }
+}

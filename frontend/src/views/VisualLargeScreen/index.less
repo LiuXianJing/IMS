@@ -1,0 +1,24 @@
+@titleHeight: 50px;
+
+.visual-large-screen-container {
+    height: 100%;
+    color: #fff;
+    background-color: #06102e;
+    .title {
+        height: @titleHeight;
+        font-size: 20px;
+        font-weight: bold;
+        padding: 10px;
+    }
+    .main {
+        display: flex;
+        width: 100%;
+        height: calc(100% - @titleHeight);
+        .left {
+            flex: 7;
+        }
+        .right {
+            flex: 3;
+        }
+    }
+}
