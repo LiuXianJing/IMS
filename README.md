@@ -15,26 +15,26 @@ Note: Commercial use of this project code is prohibited
 
 # Features
 - Login and Registration, 
-<img src="./frontend//src//assets/images/pages/sign.png" />
+    <img src="./frontend//src//assets/images/pages/sign.png" />
 - AIGC, 
 - Dashboard, 
-<img src="./frontend//src//assets/images/pages/dash.png" />
+    <img src="./frontend//src//assets/images/pages/dash.png" />
 - Entertainment, 
-<img src="./frontend//src//assets/images/pages/e_c.png" />
+    <img src="./frontend//src//assets/images/pages/e_c.png" />
 - Food, 
-<img src="./frontend//src//assets/images/pages/milk.png" />
+    <img src="./frontend//src//assets/images/pages/milk.png" />
 - Question List, 
-<img src="./frontend//src//assets/images/pages/issues.png" />
+    <img src="./frontend//src//assets/images/pages/issues.png" />
 - Record Video, 
-<img src="./frontend//src//assets/images/pages/record_video.png" />
+    <img src="./frontend//src//assets/images/pages/record_video.png" />
 - About, 
 - User Management, 
-<img src="./frontend//src//assets/images/pages/user_management.png" />
+    <img src="./frontend//src//assets/images/pages/user_management.png" />
 - IP information management,
 - Large visualization screen,
-<img src="./frontend//src//assets/images/pages/vusual.png" />
+    <img src="./frontend//src//assets/images/pages/vusual.png" />
 - Chat conversations,
-<img src="./frontend//src//assets/images/pages/chat.png" />
+    <img src="./frontend//src//assets/images/pages/chat.png" />
 - Play music,
 - Visual operation, multi-functional collection
 
