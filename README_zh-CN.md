@@ -15,26 +15,26 @@
 
 # 特性
 - 登录注册，
-<img src="./frontend//src//assets/images/pages/sign.png" />
+    <img src="./frontend//src//assets/images/pages/sign.png" />
 - AIGC，
 - 仪表盘，
-<img src="./frontend//src//assets/images/pages/dash.png" />
+    <img src="./frontend//src//assets/images/pages/dash.png" />
 - 娱乐，
-<img src="./frontend//src//assets/images/pages/e_c.png" />
+    <img src="./frontend//src//assets/images/pages/e_c.png" />
 - 食品，
-<img src="./frontend//src//assets/images/pages/milk.png" />
+    <img src="./frontend//src//assets/images/pages/milk.png" />
 - 问题列表，
-<img src="./frontend//src//assets/images/pages/issues.png" />
+    <img src="./frontend//src//assets/images/pages/issues.png" />
 - 录制视频，
-<img src="./frontend//src//assets/images/pages/record_video.png" />
+    <img src="./frontend//src//assets/images/pages/record_video.png" />
 - 关于, 
 - 用户管理，
-<img src="./frontend//src//assets/images/pages/user_management.png" />
+    <img src="./frontend//src//assets/images/pages/user_management.png" />
 - IP信息管理，
 - 可视化大屏，
-<img src="./frontend//src//assets/images/pages/vusual.png" />
+    <img src="./frontend//src//assets/images/pages/vusual.png" />
 - 聊天对话，
-<img src="./frontend//src//assets/images/pages/chat.png" />
+    <img src="./frontend//src//assets/images/pages/chat.png" />
 - 播放音乐，
 - 可视化操作，多功能集合
 
