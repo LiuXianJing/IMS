@@ -15,17 +15,26 @@ Hinweis: Die kommerzielle Nutzung dieses Projektcodes ist untersagt
 
 # Merkmale
 - Anmeldung und Registrierung, 
+<img src="./frontend//src//assets/images/pages/sign.png" />
 - AIGC, 
 - Dashboard, 
+<img src="./frontend//src//assets/images/pages/dash.png" />
 - Unterhaltung, 
+<img src="./frontend//src//assets/images/pages/e_c.png" />
 - Essen, 
+<img src="./frontend//src//assets/images/pages/milk.png" />
 - Fragenliste, 
+<img src="./frontend//src//assets/images/pages/issues.png" />
 - Video aufnehmen, 
+<img src="./frontend//src//assets/images/pages/record_video.png" />
 - Info， 
 - Benutzerverwaltung, 
+<img src="./frontend//src//assets/images/pages/user_management.png" />
 - IP-Informationsmanagement,
 - Großer Visualisierungsbildschirm,
+<img src="./frontend//src//assets/images/pages/vusual.png" />
 - Chat-Gespräche,
+<img src="./frontend//src//assets/images/pages/chat.png" />
 - Spiel Musik,
 - Visuelle Bedienung, multifunktionale Sammlung
 

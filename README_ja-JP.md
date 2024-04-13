@@ -15,17 +15,26 @@
 
 # 特徴
 - ログインと登録、
+<img src="./frontend//src//assets/images/pages/sign.png" />
 - AIGC、
 - ダッシュボード、
+<img src="./frontend//src//assets/images/pages/dash.png" />
 - エンターテイメント、
+<img src="./frontend//src//assets/images/pages/e_c.png" />
 - 食べ物、
+<img src="./frontend//src//assets/images/pages/milk.png" />
 - 質問リスト、
+<img src="./frontend//src//assets/images/pages/issues.png" />
 - ビデオ録画、
+<img src="./frontend//src//assets/images/pages/record_video.png" />
 - 概要、
 - ユーザー管理、
+<img src="./frontend//src//assets/images/pages/user_management.png" />
 - IP情報管理、
 - 大きな視覚化画面、
+<img src="./frontend//src//assets/images/pages/vusual.png" />
 - チャットでの会話、
+<img src="./frontend//src//assets/images/pages/chat.png" />
 - 音楽を再生、
 - 視覚的な操作、多機能なコレクション
 

@@ -1,5 +1,6 @@
 import { ChangeEvent, useEffect, useRef, useState, } from 'react'
 import { ChatDataType } from '../../types';
+import MultifunctionalInput from '../MultifunctionalInput';
 import './index.less'
 
 interface IProps {
@@ -28,8 +29,7 @@ const Chat = (props: IProps) => {
         }
     }, [])
 
-    const changeEnterMessage = (e: ChangeEvent<HTMLTextAreaElement>) => {
-        const { value, } = e.target;
+    const changeEnterMessage = (value: string) => {
         setValue(value)
         onEnterMessage?.(value)
     }
@@ -65,10 +65,8 @@ const Chat = (props: IProps) => {
             onEnterMessage ?
             <div className="operate">
                 <div className="input-message">
-                    <textarea 
-                    className='message-textarea' 
-                    placeholder='Please enter your message' 
-                    onChange={changeEnterMessage}
+                    <MultifunctionalInput 
+                    changeEnterMessage={changeEnterMessage} 
                     />
                 </div>
                 <button className='send-btn' onClick={handleSend}>
