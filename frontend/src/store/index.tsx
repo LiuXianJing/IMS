@@ -1,10 +1,11 @@
 import { configureStore } from '@reduxjs/toolkit'
-import { signSlice, } from './slices'
+import { AIGCMechanismSlice, signSlice,  } from './slices'
 // ...
 
 export const store = configureStore({
   reducer: {
     sign: signSlice.reducer,
+    AIGCMechanism: AIGCMechanismSlice.reducer,
   }
 })
 
