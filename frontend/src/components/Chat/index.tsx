@@ -43,7 +43,7 @@ const Chat = (props: IProps) => {
     return <div className="chat-container" style={style}>
         <div className="chat-content" ref={chatContentRef}>
         {
-            data.map((item) => {
+            data.map((item, index) => {
                 return <div className={`chat-item ${['admin', 'user'].includes(item.type) ? 'is-me' : 'is-other'}`}>
                     <div className="avatar">
                         <img src={item.logo} alt="avatar" width={32} />
@@ -56,6 +56,22 @@ const Chat = (props: IProps) => {
                         <div className="time">
                             {item.time.replace('GMT', '')}
                         </div>
+                        {
+                            item.type === 'user' ? 
+                            <div className='message-item-operate'>
+                                {
+                                    index === data.length - 1 ?
+                                    <span className="edit">
+                                        edit
+                                    </span>
+                                    : null
+                                }
+                                <span className="withdraw">
+                                    withdraw
+                                </span>
+                            </div>
+                            : null
+                        }
                     </div>
                 </div>
             })
