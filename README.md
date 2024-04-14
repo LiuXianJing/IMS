@@ -17,6 +17,8 @@ Note: Commercial use of this project code is prohibited
 - Login and Registration, 
     <img src="./frontend//src//assets/images/pages/sign.png" />
 - AIGC, 
+    <img src="./frontend//src//assets/images/pages/AIGC_business_layout.png" />
+    <img src="./frontend//src//assets/images/pages/AIGC_business_layout_add.png" />
 - Dashboard, 
     <img src="./frontend//src//assets/images/pages/dash.png" />
 - Entertainment, 

@@ -31,6 +31,7 @@
     "eslint": "^8.57.0",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.6",
+    "events": "^3.3.0",
     "less": "^4.2.0",
     "react-router-dom": "^6.22.3",
     "typescript": "^5.2.2",
