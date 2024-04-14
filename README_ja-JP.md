@@ -17,6 +17,8 @@
 - ログインと登録、
     <img src="./frontend//src//assets/images/pages/sign.png" />
 - AIGC、
+    <img src="./frontend//src//assets/images/pages/AIGC_business_layout.png" />
+    <img src="./frontend//src//assets/images/pages/AIGC_business_layout_add.png" />
 - ダッシュボード、
     <img src="./frontend//src//assets/images/pages/dash.png" />
 - エンターテイメント、

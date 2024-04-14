@@ -17,6 +17,8 @@ Hinweis: Die kommerzielle Nutzung dieses Projektcodes ist untersagt
 - Anmeldung und Registrierung, 
     <img src="./frontend//src//assets/images/pages/sign.png" />
 - AIGC, 
+    <img src="./frontend//src//assets/images/pages/AIGC_business_layout.png" />
+    <img src="./frontend//src//assets/images/pages/AIGC_business_layout_add.png" />
 - Dashboard, 
     <img src="./frontend//src//assets/images/pages/dash.png" />
 - Unterhaltung, 

@@ -17,6 +17,8 @@
 - 登录注册，
     <img src="./frontend//src//assets/images/pages/sign.png" />
 - AIGC，
+    <img src="./frontend//src//assets/images/pages/AIGC_business_layout.png" />
+    <img src="./frontend//src//assets/images/pages/AIGC_business_layout_add.png" />
 - 仪表盘，
     <img src="./frontend//src//assets/images/pages/dash.png" />
 - 娱乐，
