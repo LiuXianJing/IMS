@@ -1,11 +1,16 @@
 import { useEffect, useState } from "react"
+import { message } from "antd"
 import Chat from "../../components/Chat"
 import { ChatDataType } from "../../types"
 import { getChatMessagesAPI, sendChatMessageAPI, } from "../../api"
 import { getUserAvatarUrl, } from "../../utils"
+import { useAppDispatch } from "../../hooks"
+import { changeSignModalVisible } from "../../store/slices"
 import './index.less'
 
 const ChatChat = () => {
+
+    const dispatch = useAppDispatch()
 
     const [chatData, setChatData] = useState<ChatDataType[]>([])
 
@@ -39,8 +44,17 @@ const ChatChat = () => {
     }
 
     const getChatData = async () => {
-        const resData = await getChatMessagesAPI()
-        setChatData(resData.data)
+        let resData
+        try {
+            resData = await getChatMessagesAPI()
+            setChatData(resData.data)
+        } catch (error: any) {
+            const errResData: any = error.response?.data || {}
+            if(errResData.code == 401) {
+                message.error(errResData.msg)
+                dispatch(changeSignModalVisible(true))
+            }
+        }
     }
 
     return <div className="chat-chat-container">

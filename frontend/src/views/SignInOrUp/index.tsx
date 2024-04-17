@@ -46,10 +46,13 @@ const SignInOrUp = (_props: IProps) => {
             const res: any = await signInOrUpAPI(param)
             if(res.code == 200) {
                 message.success(res.msg)
-                dispatch(setUserSignedInfo({
+                const userInfo = {
                     account: account,
-                }))
+                    token: res.data?.token,
+                }
+                dispatch(setUserSignedInfo(userInfo))
                 dispatch(changeSignModalVisible(false))
+                location.reload()
             }
         } catch (error: any) {
             message.error(error.message)

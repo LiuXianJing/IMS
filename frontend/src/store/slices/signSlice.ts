@@ -8,12 +8,16 @@ export interface SignState {
   userSignedInfo: UserSignInfoType,
 }
 
+const userInfoStr = localStorage.getItem('userInfo')
+const userInfo = userInfoStr && JSON.parse(userInfoStr)
+
 // Define the initial state using that type
 const initialState: SignState = {
     visible: false,
-    userSignedInfo: {
+    userSignedInfo: userInfo || {
       account: '',
       password: '',
+      token: '',
     }
 }
 
@@ -26,6 +30,7 @@ export const signSlice = createSlice({
     },
     setUserSignedInfo: (state, action: PayloadAction<UserSignInfoType>) => {
         state.userSignedInfo = action.payload
+        localStorage.setItem('userInfo', JSON.stringify(action.payload))
     },
   }
 })

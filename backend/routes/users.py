@@ -1,5 +1,6 @@
 from application import app
-from flask import jsonify
+from flask import jsonify, request
+from util.token import generate_jwt
 from db import mysql
 
 @app.route("/sign_in_up", methods=["POST"])
@@ -11,10 +12,13 @@ def sign_in_up():
     query = "SELECT account FROM users WHERE account = %s"
     cur.execute(query, (account,))
     rows = cur.fetchall()
+    token = generate_jwt({
+        'account': account,
+    })
     if rows[0]:
         cur.close()
         return jsonify({
-        'data': None,
+        'data': {'token': token},
         'code': 200,
         'status': True,
         'msg': 'Sign In successfully',
@@ -23,7 +27,7 @@ def sign_in_up():
     mysql.connection.commit()
     cur.close()
     return jsonify({
-        'data': None,
+        'data': {'token': token},
         'code': 200,
         'status': True,
         'msg': 'Sign Up successfully',
