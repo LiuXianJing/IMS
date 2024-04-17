@@ -136,20 +136,38 @@ flask run
 </table>
 
 # Projektdateibaum
+
 ```
 IMS
 ├─ backend
 │  ├─ app.py
-│  ├─ controller
+│  ├─ application.py
 │  ├─ db
-│  │  └─ users.sql
+│  │  ├─ chat.sql
+│  │  ├─ users.sql
+│  │  └─ visual_list.sql
+│  ├─ db.py
 │  ├─ README.md
+│  ├─ routes
+│  │  ├─ chat.py
+│  │  ├─ ip_info.py
+│  │  ├─ users.py
+│  │  ├─ visual_list.py
+│  │  └─ __pycache__
+│  │     ├─ chat.cpython-311.pyc
+│  │     ├─ ip_info.cpython-311.pyc
+│  │     ├─ users.cpython-311.pyc
+│  │     └─ visual_list.cpython-311.pyc
 │  ├─ util
 │  │  ├─ get_ip_info.py
+│  │  ├─ token.py
 │  │  └─ __pycache__
-│  │     └─ get_ip_info.cpython-311.pyc
+│  │     ├─ get_ip_info.cpython-311.pyc
+│  │     └─ token.cpython-311.pyc
 │  └─ __pycache__
-│     └─ app.cpython-311.pyc
+│     ├─ app.cpython-311.pyc
+│     ├─ application.cpython-311.pyc
+│     └─ db.cpython-311.pyc
 ├─ frontend
 │  ├─ .eslintrc.cjs
 │  ├─ index.html
@@ -163,21 +181,48 @@ IMS
 │  │  │  ├─ axios.ts
 │  │  │  ├─ index.ts
 │  │  │  └─ request
+│  │  │     ├─ chat.ts
 │  │  │     ├─ ip.ts
+│  │  │     ├─ list.ts
 │  │  │     └─ sign.ts
 │  │  ├─ App.less
 │  │  ├─ App.tsx
 │  │  ├─ assets
+│  │  │  ├─ audio
+│  │  │  │  └─ majestic_music.mp3
 │  │  │  ├─ images
-│  │  │  │  └─ logo
-│  │  │  │     └─ technology
-│  │  │  │        └─ mdn.png
+│  │  │  │  ├─ background
+│  │  │  │  │  └─ grasslandScenery.jpg
+│  │  │  │  ├─ logo
+│  │  │  │  │  └─ technology
+│  │  │  │  │     └─ mdn.png
+│  │  │  │  └─ pages
+│  │  │  │     ├─ AIGC_business_layout.png
+│  │  │  │     ├─ AIGC_business_layout_add.png
+│  │  │  │     ├─ chat.png
+│  │  │  │     ├─ dash.png
+│  │  │  │     ├─ e_c.png
+│  │  │  │     ├─ issues.png
+│  │  │  │     ├─ milk.png
+│  │  │  │     ├─ record_video.png
+│  │  │  │     ├─ sign.png
+│  │  │  │     ├─ user_management.png
+│  │  │  │     └─ vusual.png
 │  │  │  └─ react.svg
 │  │  ├─ components
+│  │  │  ├─ Chat
+│  │  │  │  ├─ index.less
+│  │  │  │  └─ index.tsx
 │  │  │  ├─ GraphglGpuLayout
 │  │  │  │  ├─ index.less
 │  │  │  │  └─ index.tsx
+│  │  │  ├─ MultifunctionalInput
+│  │  │  │  ├─ index.less
+│  │  │  │  └─ index.tsx
 │  │  │  ├─ MyInput
+│  │  │  │  ├─ index.less
+│  │  │  │  └─ index.tsx
+│  │  │  ├─ MyList
 │  │  │  │  ├─ index.less
 │  │  │  │  └─ index.tsx
 │  │  │  ├─ SummaryGraph
@@ -197,17 +242,25 @@ IMS
 │  │  ├─ store
 │  │  │  ├─ index.tsx
 │  │  │  └─ slices
+│  │  │     ├─ AIGCMechanismSlice.ts
 │  │  │     ├─ index.tsx
 │  │  │     └─ signSlice.ts
 │  │  ├─ types
+│  │  │  ├─ aigc.ts
+│  │  │  ├─ chat.ts
 │  │  │  ├─ entertainment.ts
 │  │  │  ├─ foods.ts
 │  │  │  ├─ index.ts
+│  │  │  ├─ list.ts
+│  │  │  ├─ otherInfo.ts
 │  │  │  ├─ sign.ts
 │  │  │  ├─ technology.ts
 │  │  │  └─ user.ts
 │  │  ├─ utils
+│  │  │  ├─ aigc.ts
+│  │  │  ├─ eventBus.ts
 │  │  │  ├─ index.ts
+│  │  │  ├─ playMusic.ts
 │  │  │  └─ sign.ts
 │  │  ├─ views
 │  │  │  ├─ About
@@ -219,9 +272,19 @@ IMS
 │  │  │  │     └─ index.tsx
 │  │  │  ├─ AIGC
 │  │  │  │  ├─ BusinessLayout
-│  │  │  │  │  └─ index.tsx
+│  │  │  │  │  ├─ AddModal
+│  │  │  │  │  │  └─ index.tsx
+│  │  │  │  │  ├─ index.tsx
+│  │  │  │  │  ├─ inex.less
+│  │  │  │  │  ├─ MechanismDataForm
+│  │  │  │  │  │  └─ index.tsx
+│  │  │  │  │  └─ MechanismTable
+│  │  │  │  │     └─ index.tsx
 │  │  │  │  └─ Introduction
 │  │  │  │     └─ index.tsx
+│  │  │  ├─ ChatChat
+│  │  │  │  ├─ index.less
+│  │  │  │  └─ index.tsx
 │  │  │  ├─ DashBoard
 │  │  │  │  └─ Overview
 │  │  │  │     ├─ index.less
@@ -241,6 +304,9 @@ IMS
 │  │  │  ├─ Menu
 │  │  │  │  ├─ index.less
 │  │  │  │  └─ index.tsx
+│  │  │  ├─ Other
+│  │  │  │  ├─ index.less
+│  │  │  │  └─ index.tsx
 │  │  │  ├─ QueryTable
 │  │  │  │  └─ index.tsx
 │  │  │  ├─ RecordVideo
@@ -258,8 +324,17 @@ IMS
 │  │  │  │     └─ Websites
 │  │  │  │        ├─ index.less
 │  │  │  │        └─ index.tsx
-│  │  │  └─ UsersManagement
-│  │  │     ├─ EditUserModal
+│  │  │  ├─ UsersManagement
+│  │  │  │  ├─ EditUserModal
+│  │  │  │  │  └─ index.tsx
+│  │  │  │  ├─ index.less
+│  │  │  │  └─ index.tsx
+│  │  │  └─ VisualLargeScreen
+│  │  │     ├─ CustomData
+│  │  │     │  ├─ index.less
+│  │  │     │  └─ index.tsx
+│  │  │     ├─ GaugeData
+│  │  │     │  ├─ index.less
 │  │  │     │  └─ index.tsx
 │  │  │     ├─ index.less
 │  │  │     └─ index.tsx
