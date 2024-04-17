@@ -1,5 +1,6 @@
 from application import app
 from flask import request, jsonify
+from util.token import verify_jwt
 from db import mysql
 
 @app.route('/send_chat_message', methods=['POST'])
@@ -26,6 +27,7 @@ def send_chat_message():
     })
  
 @app.route('/get_chat_messages', methods=['POST'])
+@verify_jwt
 def get_chat_messages():
     cur = mysql.connection.cursor()
     cur.execute('select * from chat')

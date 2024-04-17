@@ -62,6 +62,10 @@ pip install flask-mysqldb
 ```bash
 pip install -U flask-cors
 ```
+```bash
+pip install jwt
+```
+
 ### run server
 ```bash
 flask run

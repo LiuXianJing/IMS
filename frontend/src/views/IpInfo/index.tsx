@@ -18,11 +18,11 @@ const IpInfo = () => {
        try {
            const resData = await getIPInfoAPI(param)
            const ipInfoItems_: DescriptionsProps['items'] = []
-           Object.keys(ipInfo).forEach((key: string) => {
+           Object.keys(resData.data).forEach((key: string) => {
                 ipInfoItems_.push({
                     key: key,
                     label: key,
-                    children: ipInfo[key] || '--',
+                    children: resData.data[key] || '--',
                 })
            })
            setIpInfo(resData.data)
