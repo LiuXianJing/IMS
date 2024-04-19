@@ -65,7 +65,8 @@ const AboutMe = () => {
                     Description: 
                 </span>
                 <span className="value">
-                    I am an IT practitioner with strong full-stack development capabilities. My technical expertise includes front-end/back-end/operation and maintenance/algorithms, etc.
+                    I am an IT practitioner with strong full-stack development capabilities, Have many years of development experience. 
+                    My technical expertise includes front-end/back-end/operation and maintenance/algorithms, etc.
                     Technology stack:
                     React, Vue, HTML, CSS, JavaScript, Node.js, Golang, Java, Python, C/C++, MySQL, Redis, and more.
                     And I can also do hardware related work.
