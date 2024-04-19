@@ -9,13 +9,20 @@ const AboutIMS = () => {
             <h3 className="sub-title">Frontend: </h3>
             <ul>
                 <li>React</li>
+                <li>react-redux</li>
+                <li>react-router-dom</li>
                 <li>Vite</li>
                 <li>Typescript</li>
+                <li>antd</li>
+                <li>axios</li>
+                <li>ehcarts</li>
             </ul>
 
             <h3 className="sub-title">Backend: </h3>
             <ul>
-                <li>xxx</li>
+                <li>Python</li>
+                <li>Flask</li>
+                <li>MySQL</li>
             </ul>
         </p>
     </div>
