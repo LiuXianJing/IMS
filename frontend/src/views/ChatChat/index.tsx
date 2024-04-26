@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 import { message } from "antd"
 import Chat from "../../components/Chat"
-import { ChatDataType } from "../../types"
+import { AllMessageValueType, ChatDataType, } from "../../types"
 import { getChatMessagesAPI, sendChatMessageAPI, } from "../../api"
 import { getUserAvatarUrl, } from "../../utils"
 import { useAppDispatch } from "../../hooks"
@@ -24,12 +24,11 @@ const ChatChat = () => {
         } */
     }, [])
 
-    const sendMessage = async (message: string,) => {
-        console.log('message', message);
+    const sendMessage = async (message: AllMessageValueType[]) => {
         const param: Pick<ChatDataType, 'name' | 'type' | 'message' | 'logo'> = {
             name: 'Charlie Chaplin',
             type: 'user',
-            message,
+            message: message[0].value,
             logo: getUserAvatarUrl(1)
         }
         let resData
@@ -61,7 +60,7 @@ const ChatChat = () => {
         <Chat 
         data={chatData} 
         onEnterMessage={() => {}} 
-        onSendMessage={(message: string,) => {sendMessage(message)}} 
+        onSendMessage={(message: AllMessageValueType[]) => {sendMessage(message)}} 
         />
     </div>
 }
