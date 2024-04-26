@@ -3,6 +3,7 @@ CREATE TABLE imsdb.chat (
 	`name` VARCHAR(50) NOT null COMMENT 'User Name',
     `type` ENUM('admin', 'user', 'guest') NOT NULL,
     `message` TEXT NOT NULL,
+    `message_type` ENUM('text','image','video','audio','file') DEFAULT 'text',
 	`logo` VARCHAR(1000) COMMENT 'User Logo',
 	`url` VARCHAR(1000) COMMENT 'User home website URL',
     `description` TEXT,

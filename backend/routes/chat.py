@@ -4,6 +4,7 @@ from util.token import verify_jwt
 from db import mysql
 
 @app.route('/send_chat_message', methods=['POST'])
+@verify_jwt
 def send_chat_message():
     if not request.is_json:
         return jsonify({"error": "Request must be JSON"}), 400

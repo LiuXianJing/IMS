@@ -1,20 +1,20 @@
 import { ChangeEvent, useEffect, useRef, useState, } from 'react'
-import { ChatDataType } from '../../types';
+import { AllMessageValueType, ChatDataType } from '../../types';
 import MultifunctionalInput from '../MultifunctionalInput';
 import './index.less'
 
 interface IProps {
     data: ChatDataType[];
     style?: Record<string, string | number>;
-    onEnterMessage?: (message: string) => void;
-    onSendMessage?: (message: string,) => void;
+    onEnterMessage?: (message: AllMessageValueType[]) => void;
+    onSendMessage?: (message: AllMessageValueType[],) => void;
 }
 
 const Chat = (props: IProps) => {
 
     const { data, style, onEnterMessage, onSendMessage, } = props
 
-    const [value, setValue] = useState<string>('')
+    const [value, setValue] = useState<AllMessageValueType[]>([])
 
     const chatContentRef = useRef<HTMLDivElement>(null)
 
@@ -29,14 +29,37 @@ const Chat = (props: IProps) => {
         }
     }, [])
 
-    const changeEnterMessage = (value: string) => {
+    const changeEnterMessage = (value: AllMessageValueType[]) => {
         setValue(value)
         onEnterMessage?.(value)
     }
 
     const handleSend = () => {
-        if(value.length) {
+        if(value) {
             onSendMessage?.(value,)
+        }
+    }
+    console.log(data);
+    
+
+    const renderMessage = (messageStr: AllMessageValueType[] | string) => {
+        if(typeof messageStr == 'string') {
+            console.log(messageStr[0]);
+            if(messageStr[0] === '[') {
+                const messageArr = JSON.parse(messageStr)
+                messageArr.map((message: AllMessageValueType) => {
+                    if(message.type === 'image') {
+                        return <img src={message.value} alt={message.name} />
+                    }
+                    if(message.type === 'text') {
+                        return <span>{message.value}</span>
+                    }
+                })
+            } else {
+                return messageStr
+            }
+        } else {
+            return '--'
         }
     }
 
@@ -51,7 +74,7 @@ const Chat = (props: IProps) => {
                     </div>
                     <div className="content">
                         <div className="message">
-                            {item.message}
+                            {renderMessage(item.message)}
                         </div>
                         <div className="time">
                             {item.time.replace('GMT', '')}
