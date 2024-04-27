@@ -13,6 +13,10 @@ const Header = () => {
     const dispatch = useAppDispatch()
     const userSignedInfo =  useAppSelector(selectUserSignedInfo)
 
+    const handlePlayGame = () => {
+        navigate('/game/play_game')
+    }
+
     const handlePlayMusic = () => {
         playMusic()
     }
@@ -38,6 +42,9 @@ const Header = () => {
             <span className='name'>IMS</span>
         </div>
         <div className='operate'>
+            <div className="item" onClick={handlePlayGame}>
+                <span>Play Game</span>
+            </div>
             <div className="item" onClick={handlePlayMusic}>
                 <span>Play/Pause Music</span>
             </div>

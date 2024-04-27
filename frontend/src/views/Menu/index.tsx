@@ -60,6 +60,10 @@ const items: MenuItem[] = [
   getItem('Ip Info', 'ip_info', <SettingOutlined />),
 
   getItem('Chat Chat', 'chat_chat', <SettingOutlined />),
+
+  getItem('Game', 'game', <SettingOutlined />, [
+    getItem('Play Game', 'play_game', <SettingOutlined />)
+  ]),
 ];
 
 const ProMenu = () => {
