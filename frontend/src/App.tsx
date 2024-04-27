@@ -22,6 +22,7 @@ import VisualLargeScreen from "./views/VisualLargeScreen";
 import Other from "./views/Other";
 import ChatChat from "./views/ChatChat";
 import majesticMusic from './assets/audio/majestic_music.mp3'
+import PlayGame from "./views/Game/PlayGame";
 import './App.less'
 
 function App() {
@@ -74,6 +75,9 @@ function App() {
                             <Route path='/chat_chat' element={<ChatChat />} />
                             <Route path="other" element={<Other />} />
                             <Route path='/' element={<DashBoardOverview />} />
+                            <Route path='game'>
+                                <Route path='play_game' element={<PlayGame />} />
+                            </Route>
                         </Routes>
                     </div>
                 </div>

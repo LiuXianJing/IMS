@@ -1,0 +1,31 @@
+.play-game-container {
+    height: 100%;
+    .operate {
+        display: flex;
+        column-gap: 30%;
+        .operate-item {
+            flex: 1;
+            display: flex;
+            span {
+                display: inline-flex;
+                flex: 1;
+            }
+        }
+    }
+    .play-game-area {
+        height: 90%;
+        padding: 20px;
+        background-color: black;
+        .area {
+            .area-item {
+                @size: 50px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: @size;
+                height: @size;
+                background-color: aqua;
+            }
+        }
+    }
+}
