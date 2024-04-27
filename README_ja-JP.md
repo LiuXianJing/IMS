@@ -38,6 +38,7 @@
 - チャットでの会話、
     <img src="./frontend//src//assets/images/pages/chat.png" />
 - 音楽を再生、
+- ゲーム、
 - 視覚的な操作、多機能なコレクション
 
 # 倉庫リンク

@@ -38,6 +38,7 @@
 - 聊天对话，
     <img src="./frontend//src//assets/images/pages/chat.png" />
 - 播放音乐，
+- 游戏，
 - 可视化操作，多功能集合
 
 # 仓库地址

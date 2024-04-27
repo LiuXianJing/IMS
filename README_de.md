@@ -38,6 +38,7 @@ Hinweis: Die kommerzielle Nutzung dieses Projektcodes ist untersagt
 - Chat-Gespräche,
     <img src="./frontend//src//assets/images/pages/chat.png" />
 - Spiel Musik,
+- Spiel,
 - Visuelle Bedienung, multifunktionale Sammlung
 
 # Lageradresse
