@@ -38,7 +38,8 @@ Note: Commercial use of this project code is prohibited
 - Chat conversations,
     <img src="./frontend//src//assets/images/pages/chat.png" />
 - Play music,
-- Visual operation, multi-functional collection
+- Game,
+- Visual operation, multi-functional collection,
 
 # Warehouse Address
 - [gitee](https://gitee.com/xian-jin/IMS)
