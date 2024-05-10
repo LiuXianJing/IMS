@@ -1,9 +1,12 @@
-import { useEffect } from "react"
-import { message } from "antd"
+import { useEffect, useState } from "react"
+import { Button, message } from "antd"
 import { gameKeycodeMap } from "../../../utils"
+import GameplayDescriptionModal from "./GameplayDescriptionModal"
 import './index.less'
 
 const PlayGame = () => {
+
+    const [gameplayDescriptionModalVisible, setGameplayDescriptionModalVisible] = useState<boolean>(false)
 
     useEffect(() => {
         document.addEventListener('keydown', handleListenKey)
@@ -11,6 +14,10 @@ const PlayGame = () => {
             document.removeEventListener('keydown', handleListenKey)
         }
     }, [])
+
+    const handleOpenGameplayDescription = () => {
+        setGameplayDescriptionModalVisible(true)
+    }
 
     const handleListenKey = (event: KeyboardEvent) => {
         const keyCode: number = event.keyCode
@@ -77,18 +84,7 @@ const PlayGame = () => {
 
     return <div className="play-game-container">
         <div className="operate">
-            <div className="operate-item">
-                <span>W</span>
-                <span>A</span>
-                <span>S</span>
-                <span>D</span>
-            </div>
-            <div className="operate-item">
-                <span>↑</span>
-                <span>←</span>
-                <span>↓</span>
-                <span>→</span>
-            </div>
+            <Button onClick={handleOpenGameplayDescription}>Gameplay Description</Button>
         </div>
         <div className="play-game-area">
             <h2>Play Game</h2>
@@ -104,6 +100,9 @@ const PlayGame = () => {
                 <div id='random-item'></div>
             </div>
         </div>
+        <GameplayDescriptionModal 
+        visible={gameplayDescriptionModalVisible} 
+        />
     </div>
 }
 
