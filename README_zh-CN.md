@@ -40,6 +40,8 @@
 - 播放音乐，
 - 游戏，
 - 可视化操作，多功能集合
+- 其它组件
+  水印
 
 # 仓库地址
 - [gitee](https://gitee.com/xian-jin/IMS)
