@@ -1,11 +1,30 @@
 import { useEffect, useState } from "react";
 import { FoodsMilkPowderDataType } from "../../../types";
-import { Space, Table, TableProps, Tag } from "antd";
+import { message, Modal, Space, Table, TableProps, Tag } from "antd";
+import EditMilkPowerModal from "./EditMilkPowerModal.tsx";
 
 const FoodsMilkPowder = () => {
 
     const [milkPowderData, setMilkPowderData] = useState<FoodsMilkPowderDataType[]>([])
+    const [editMilkPowerItem, setEditMilkPowerItem] = useState<FoodsMilkPowderDataType | null>(null)
+    const [editMilkPowerModalVisible, setEditMilkPowerModalVisible] = useState<boolean>(false)
+
+    const handleEditMilkPower = (record: FoodsMilkPowderDataType) => {
+        setEditMilkPowerItem(record)
+        setEditMilkPowerModalVisible(true)
+    }
     
+    const hadnleDeleteItem = (record: FoodsMilkPowderDataType) => {
+        const name = record.name
+        Modal.confirm({
+            title: `Are you sure delete ${name}?`,
+            onOk: () => {
+                // api
+                message.success(`Delete ${record.name} Succussfully!`)
+            }
+        })
+    }
+
     const columns: TableProps<FoodsMilkPowderDataType>['columns'] = [
         {
             title: 'Name',
@@ -44,8 +63,8 @@ const FoodsMilkPowder = () => {
             key: 'action',
             render: (_, record) => (
                 <Space size="middle">
-                    <a>Edit</a>
-                    <a>Delete</a>
+                    <a onClick={() => {handleEditMilkPower(record)}}>Edit</a>
+                    <a onClick={() => {hadnleDeleteItem(record)}}>Delete</a>
                 </Space>
             ),
         },
@@ -65,10 +84,10 @@ const FoodsMilkPowder = () => {
             {
                 id: 'id-2',
                 key: 'id-2',
-                name: 'zhengge',
+                name: 'douNai',
                 area: 'Chaina',
-                website: 'http://www.zhenggefood.com',
-                description: 'Good!'
+                website: 'http://www.xxx.com',
+                description: 'Yauh!'
             },
         ]
         setMilkPowderData(data)
@@ -79,6 +98,14 @@ const FoodsMilkPowder = () => {
         <div>
             <Table columns={columns} dataSource={milkPowderData} />
         </div>
+        {
+            editMilkPowerModalVisible &&
+            <EditMilkPowerModal 
+            visible={editMilkPowerModalVisible}
+            editMilkPowerItem={editMilkPowerItem}
+            onClose={() => {setEditMilkPowerModalVisible(false)}}
+            />
+        }
     </div>
 }
 
