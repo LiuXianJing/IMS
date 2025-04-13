@@ -40,6 +40,8 @@ Note: Commercial use of this project code is prohibited
 - Play music,
 - Game,
 - Visual operation, multi-functional collection,
+- Other Components
+  Water Mark
 
 # Warehouse Address
 - [gitee](https://gitee.com/xian-jin/IMS)
