@@ -64,6 +64,9 @@ const items: MenuItem[] = [
   getItem('Game', 'game', <SettingOutlined />, [
     getItem('Play Game', 'play_game', <SettingOutlined />)
   ]),
+  getItem('Components', 'components', <SettingOutlined />, [
+    getItem('Water Mark', 'water_mark', <SettingOutlined />)
+  ]),
 ];
 
 const ProMenu = () => {
